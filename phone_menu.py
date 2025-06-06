@@ -1,8 +1,7 @@
-
-
-
 on = True
 off = False
+
+
 def show_screen():
     print("\n" + "─" * 50)
     print("┌" + "─" * 48 + "┐")
@@ -18,6 +17,7 @@ def show_screen():
     print("│                                                │")
     print(" " + "─" * 48 + " ")
 
+
 def user_click_one():
     print("="*50)
     print("📱 All Contacts: ")
@@ -28,7 +28,7 @@ def user_click_one():
     print("4. Kevin --- 221")
     print("5. Back Home <= ")
     users_action = input("Call Who...? \n")
-    
+
     if users_action == "1":
         print("\n📞 Calling Cody... 212")
     if users_action == "2":
@@ -40,29 +40,35 @@ def user_click_one():
     if users_action == "<" or users_action == "5":
         show_screen()
 
+
 def user_click_two():
     print("="*50)
     print("📱 iOS Messages ")
     print("="*50)
 
+
 def user_click_three():
     print("="*50)
     print("📱 Camera ")
     print("="*50)
-    
+
+
 def user_click_four():
     print("="*50)
     print("📱 Settings ")
     print("="*50)
-    
+
+
 def user_click_five():
     print("="*50)
     print("📱 Games ")
     print("="*50)
-    
+
+
 def user_click_six():
     print("Powering Off....")
- 
+
+
 def main():
     while on:
         show_screen()
@@ -81,5 +87,6 @@ def main():
         elif users_action == "6":
             print(" Power Off...")
         break
-main()
 
+
+main()
