@@ -1,4 +1,4 @@
-
+from search_func import search_func
 
 ## updated thing
 
@@ -16,7 +16,8 @@ def show_screen():
     print("│  📷 Camera     -- 3                            │")
     print("│  ⚙️ Settings    -- 4                            │")
     print("│  🎮 App Store  -- 5                            │")
-    print("│  Power Off  -- 6                            │")
+    print("│  🎮 Search  -- 6                               │")
+    print("│  Power Off  -- 7                               │")
     print("│                                                │")
     print(" " + "─" * 48 + " ")
 
@@ -63,7 +64,7 @@ def user_click_five():
     print("="*50)
     
 def user_click_six():
-    print("Powering Off....")
+    search_func()
  
 def main():
     while on:
@@ -81,7 +82,8 @@ def main():
         elif users_action == "5":
             print("🎮 Opening Games...")
         elif users_action == "6":
+            search_func()
+        elif users_action == "7":
             print(" Power Off...")
         break
 main()
-
