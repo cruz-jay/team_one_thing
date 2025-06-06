@@ -13,6 +13,6 @@ def show_contacts():
 def add_contacts():
     name = input('Enter name: ')
     number = input('Enter number (Please include tac -): ')
-    with open('contacts.csv', 'a', newline='') as contacts:
+    with open('./contacts/contacts.csv', 'a', newline='') as contacts:
         writer = csv.writer(contacts)
         writer.writerow([name, number])

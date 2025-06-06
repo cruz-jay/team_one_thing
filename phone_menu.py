@@ -32,11 +32,15 @@ def user_click_one():
         print(
             f"| {idx + 1}. {contact[0]}:      {contact[1]}                      |")
     print("="*50)
-    print("5. Back Home <= ")
+    print("5. Add Contact +")
+    print("6. Back Home <= ")
     users_action = int(input("Call Who...? \n"))
-    print(
-        f"\n📞 Calling {all_contacts[users_action][0]} ...{all_contacts[users_action][1][8::]}")
-    if users_action == "<" or users_action == "5":
+    if users_action <= len(all_contacts):
+        print(
+            f"\n📞 Calling {all_contacts[users_action][0]} ...{all_contacts[users_action][1][8::]}")
+    elif str(users_action) == "+" or str(users_action) == "5":
+        add_contacts()
+    elif str(users_action) == "<" or str(users_action) == "6":
         show_screen()
 
 
