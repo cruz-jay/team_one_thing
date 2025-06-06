@@ -1,2 +1,3 @@
 #this is where the search will be
-print("What would you like to search the internet for? \n")
+def search_func(input):
+    print("Why are you searching for ", input, "? Touch some grass.")
