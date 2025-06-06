@@ -1,6 +1,3 @@
-
-
-
 on = True
 off = False
 def show_screen():
@@ -14,7 +11,8 @@ def show_screen():
     print("│  📷 Camera     -- 3                            │")
     print("│  ⚙️ Settings    -- 4                            │")
     print("│  🎮 App Store  -- 5                            │")
-    print("│  Power Off  -- 6                            │")
+    print("│  📝 Tasks -  6                                 │")
+    print("│  Power Off  -- 7                               │")
     print("│                                                │")
     print(" " + "─" * 48 + " ")
 
@@ -61,6 +59,36 @@ def user_click_five():
     print("="*50)
     
 def user_click_six():
+    print("="*50)
+    print("📱 Tasks 📝 ")
+    print("="*50)
+    print("| [1] New Note              |")
+    print("+----------------------------+")
+    print("| 📄 Grocery List           |")
+    print("| 📄 Workout Plan           |")
+    print("| 📄 Bootcamp Goals         |")
+    print("+----------------------------+")
+    print("|                            |")
+    print("| 📝 Grocery List           |")
+    print("|                            |")
+    print("| - Eggs                    |")
+    print("| - Milk                    |")
+    print("| - Coffee                  |")
+    print("| - Tofu                    |")
+    print("|                            |")
+    print("+----------------------------+")
+    print("| [2]Home   Share   Trash 🗑️  |")
+    print("+----------------------------+")
+    print("📌 Note loaded (not really).")
+    print(" " + "─" * 48 + " ")
+    users_action = input("Action (1 for New Note, 2 for home) \n")
+
+    if users_action == "1":
+        user_new_task = input("Type your task:\n")
+    elif users_action == "2":
+        show_screen()
+
+def user_click_seven():
     print("Powering Off....")
  
 def main():
@@ -79,6 +107,9 @@ def main():
         elif users_action == "5":
             print("🎮 Opening Games...")
         elif users_action == "6":
+            print("📝 Opening Tasks...")
+            user_click_six()
+        elif users_action == "7":
             print(" Power Off...")
         break
 main()
