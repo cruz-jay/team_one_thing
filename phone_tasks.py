@@ -3,6 +3,7 @@ import subprocess
 
 class PhoneTasks:
     def __init__(self, phone_id: str) -> None:
+        super().__init__()
         self.phone_id = phone_id
 
     def make_call_sim(self, phone_number: str) -> None:

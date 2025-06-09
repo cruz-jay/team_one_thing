@@ -7,12 +7,14 @@ class PhoneMenu:
     It provides methods to display the main menu and handle user interactions.
     """
     # constants for user actions
-    user_action: str | None = None
-    user_click: str | None = None
-    on: bool = True
-    off: bool = False
+    USER_ACTION: str | None = None
+    USER_CLICK: str | None = None
+    ON: bool = True
+    OFF: bool = False
     
     def __init__(self) -> None:
+        super().__init__()
+        # initialize the phone menu
         self.show_screen()
 
     def show_screen(self) -> None:

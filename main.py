@@ -2,7 +2,7 @@ from phone_menu import PhoneMenu
 
 def main():
     menu = PhoneMenu()
-    while menu.on:
+    while menu.ON:
         menu.show_screen()
         users_action = input(" ")
         if users_action == "1":

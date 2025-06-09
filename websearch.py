@@ -10,6 +10,7 @@ from selenium import webdriver
 
 class WebSearch:
     def __init__(self, search_engine: str = "Google") -> None:
+        super().__init__()
         self.search_engine: str = search_engine
         # consider using a more complex data structure for queries
         # consider using a list to store multiple queries
