@@ -2,61 +2,61 @@ import os
 import subprocess
 
 class PhoneTasks:
-    def __init__(self, phone: str) -> None:
-        self.phone = phone
+    def __init__(self, phone_id: str) -> None:
+        self.phone_id = phone_id
 
-    def make_call_sim(self, number: str) -> None:
-        print(f"Calling {number} from {self.phone}...")
+    def make_call_sim(self, phone_number: str) -> None:
+        print(f"Calling {phone_number} from {self.phone_id}...")
 
-    def send_message_sim(self, number: str, message: str) -> None:
-        print(f"Sending message to {number} from {self.phone}: {message}")
+    def send_message_sim(self, phone_number: str, message: str) -> None:
+        print(f"Sending message to {phone_number} from {self.phone_id}: {message}")
 
     def check_balance_sim(self) -> None:
         # simulate checking balance for the phone number:
-        print(f"Checking balance for {self.phone}...")
+        print(f"Checking balance for {self.phone_id}...")
         
     def take_screenshot_sim(self) -> None:
         # simulate taking a screenshot
-        print(f"Taking screenshot on {self.phone}...")
+        print(f"Taking screenshot on {self.phone_id}...")
         
     def open_app_sim(self, app_name: str) -> None:
         # simulate opening an app on the phone
-        print(f"Opening {app_name} on {self.phone}...")
+        print(f"Opening {app_name} on {self.phone_id}...")
         
     def close_app_sim(self, app_name: str) -> None:
         # simulate closing an app on the phone
-        print(f"Closing {app_name} on {self.phone}...")
+        print(f"Closing {app_name} on {self.phone_id}...")
     
     def restart_phone_sim(self) -> None:
         # simulate restarting the phone
-        print(f"Restarting {self.phone}...")
+        print(f"Restarting {self.phone_id}...")
     
     def shutdown_phone_sim(self) -> None:  
         # simulate shutting down the phone
-        print(f"Shutting down {self.phone}...")
+        print(f"Shutting down {self.phone_id}...")
         
     def clear_cache_sim(self) -> None:
         # simulate clearing cache on the phone
-        print(f"Clearing cache on {self.phone}...") 
+        print(f"Clearing cache on {self.phone_id}...") 
         
     def update_phone_sim(self) -> None:   
         # simulate updating the phone
-        print(f"Updating {self.phone} to the latest version...")
+        print(f"Updating {self.phone_id} to the latest version...")
         
     def locate_phone_sim(self) -> None:
         # simulate locating the phone
-        print(f"Locating {self.phone}...")
+        print(f"Locating {self.phone_id}...")
        
        
     # set up real implementations for the methods below 
-    def make_call(self, number: str) -> None:
-        subprocess.run(["open", f"tel:{number}"], check=True, text=True)
+    def make_call(self, phone_number: str) -> None:
+        subprocess.run(["open", f"tel:{phone_number}"], check=True, text=True)
     
-    def send_message(self, number: str, message: str) -> None:  
-        subprocess.run(["open", f"sms:{number}?body={message}"], check=True, text=True)
+    def send_message(self, phone_number: str, message: str) -> None:  
+        subprocess.run(["open", f"sms:{phone_number}?body={message}"], check=True, text=True)
         
     def take_photo(self) -> None:
-        subprocess.run(["screencapture", "-x", f"{self.phone}_screenshot.png"], check=True, text=True)
+        subprocess.run(["screencapture", "-x", f"{self.phone_id}_screenshot.png"], check=True, text=True)
     
 phoneTasks = PhoneTasks("MyPhone")
 phoneTasks.make_call_sim("1234567890")

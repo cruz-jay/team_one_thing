@@ -62,9 +62,9 @@ class ContactManager:
             
         
 
-# contactManager = ContactManager("John Doe", "123-456-7890")
+# contactManager = ContactManager("John Black", "123-456-7890")
 # contactManager.CreateContact()
-# contactManager.UpdateContact("John Doe", "193-456-7890")
-# contactManager.ReadContact("John Doe")
-# contactManager.DeleteContact("John Doe")    
+# contactManager.UpdateContact("John Black", "193-456-7890")
+# contactManager.ReadContact("John Black")
+# contactManager.DeleteContact("John Black")    
         
