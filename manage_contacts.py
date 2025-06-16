@@ -2,10 +2,8 @@ import re
 from typing import Optional
 
 class ContactManager:
-    '''A class to manage contacts with basic operations like create, update, delete, and read contacts.'''
-    
+    '''A class to manage contacts with basic operations like create, update, delete, and read contacts.''' 
     def __init__(self, name: str, phone_number: Optional[str | int]):
-        super().__init__()
         self.name: str = name
         self.phone_number: str = ''.join(re.findall(r"\d", str(phone_number)))  # ensure phone number is stored as a string of digits
         # initialize contact as an empty dictionary
